@@ -51,7 +51,6 @@ export default function Login() {
    const resp = await response.json();
 
    if (resp.found) {
-    console.log("logged in!");
     setGlobalUser({email: resp.email, password: resp.password, _id: resp._id});
     navigate('/homePage')
    } else {

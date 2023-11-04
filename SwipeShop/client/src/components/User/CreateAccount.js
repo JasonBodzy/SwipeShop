@@ -49,12 +49,6 @@ export default function CreateAccount() {
    } else {
     alert("Account already exists with this email.");
    }
-
-
-   console.log(resp);
-   
-
-
  
    setForm({ email: "", password: "", confirm: ""});
    navigate("/");
@@ -65,8 +59,6 @@ export default function CreateAccount() {
    <div>
      <h3>Create New Account</h3>
      <form onSubmit={onSubmit}>
-
-        
        <div className="form-group">
          <label htmlFor="email">Email</label>
          <input
@@ -96,11 +88,7 @@ export default function CreateAccount() {
            value={form.confirm}
            onChange={(e) => updateForm({ confirm: e.target.value })}
          />
-
-
         </div>
-       
-
        <div className="form-group">
          <input
            type="submit"
@@ -109,6 +97,10 @@ export default function CreateAccount() {
          />
        </div>
      </form>
+
+     <div className="form-group">
+          <label>Already have an account? <b onClick={() => navigate("/login")}>Login</b></label>
+      </div>
    </div>
  );
 }
