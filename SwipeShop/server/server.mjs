@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import "./loadEnvironment.mjs";
 import records from "./routes/record.mjs";
+import CreateAccount from "./routes/user/CreateAccount.mjs";
 
 
 
@@ -15,6 +16,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/record", records);
+app.use("/CreateAccount", CreateAccount);
 
 // start the Express server
 app.listen(PORT, () => {
