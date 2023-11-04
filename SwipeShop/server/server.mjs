@@ -3,10 +3,8 @@ import cors from "cors";
 import "./loadEnvironment.mjs";
 import records from "./routes/record.mjs";
 import CreateAccount from "./routes/user/CreateAccount.mjs";
+import login from "./routes/user/login.mjs";
 
-
-
-//import DiscussionHome from "./routes/discussionPost.mjs"
 
 
 const PORT = process.env.PORT || 5050;
@@ -17,6 +15,7 @@ app.use(express.json());
 
 app.use("/record", records);
 app.use("/CreateAccount", CreateAccount);
+app.use("/login", login);
 
 // start the Express server
 app.listen(PORT, () => {

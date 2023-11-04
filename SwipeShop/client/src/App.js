@@ -7,11 +7,17 @@ import RecordList from "./components/recordList";
 import Edit from "./components/edit";
 import Create from "./components/create";
 import CreateAccount from "./components/User/CreateAccount";
+import Login from "./components/user/login";
+import HomePage from "./components/homePage";
+
  const App = () => {
  return (
    <div>
      <Routes>
+
        <Route exact path="/" element={<CreateAccount />} />
+        <Route exact path="/login" element={<Login/>} />
+        <Route exact path="/homePage" element={<HomePage/>} />
      </Routes>
    </div>
  );
