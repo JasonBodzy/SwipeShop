@@ -19,11 +19,12 @@ export default function CreateAccount() {
  // This function will handle the submission.
  async function onSubmit(e) {
    e.preventDefault();
+
    if(form.password != form.confirm) {
     alert("Passwords don't match");
     return;
    }
- 
+   
    // When a post request is sent to the create url, we'll add a new record to the database.
    const newPerson = { ...form };
 
@@ -42,6 +43,13 @@ export default function CreateAccount() {
    });
 
    const resp = await response.json();
+
+   if(resp.found === false) {
+    alert("Account creation successful");
+   } else {
+    alert("Account already exists with this email.");
+   }
+
 
    console.log(resp);
    
