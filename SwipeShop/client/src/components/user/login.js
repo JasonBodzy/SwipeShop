@@ -5,6 +5,7 @@ import "../../styles/main.css";
 import "../../styles/login.css";
  
 export default function Login() {
+
  const [form, setForm] = useState({
    email: "",
    password: ""
@@ -21,6 +22,10 @@ export default function Login() {
         statistics: []
     }
  );
+
+ window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+}
 
  const navigate = useNavigate();
  
@@ -66,7 +71,7 @@ export default function Login() {
  
  // This following section will display the form that takes the input from the user.
  return (
-   <div>
+   <div className="login-wrap">
       <table>
         <tbody>
           <tr>

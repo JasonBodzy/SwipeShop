@@ -5,6 +5,7 @@ import '../styles/main.css';
  
 export default function HomePage() {
 
+
  const [globalUser, setGlobalUser] = useLocalStorage("globalUser", 
     {
         _id: "",
@@ -18,6 +19,10 @@ export default function HomePage() {
  );
 
  const navigate = useNavigate();
+
+ if (!globalUser || globalUser.email === "") {
+  navigate("/");
+ } 
  
  
  // This following section will display the form that takes the input from the user.

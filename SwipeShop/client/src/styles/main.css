@@ -1,14 +1,17 @@
 b {
+    margin-top: 0;
     color: orange;
     font-weight: 500;
 }
 
 h1, h2, p {
+    margin-top: 0;
     font-weight: 300;
     color:slategrey
 }
 
 button {
+    margin-top: 0;
     border-radius: 25px;
     background-color: white;
     border-color: slategray;
@@ -34,7 +37,6 @@ button:hover {
     border-style: solid;
     color: slategrey;
     transition-duration: .2s;
-    
 }
 
 .button:hover {
@@ -71,7 +73,8 @@ button:hover {
 
   .select {
     color: orange;
-    padding: 8px;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 
   .container .select:after {
@@ -86,7 +89,9 @@ button:hover {
     height: fit-content;
     width: fit-content;
     background-color: white;
+    width: 120px;
     border-radius: 25px;
+    text-align: center;
     border-color: orange;
     border-style: solid;
   }
@@ -105,8 +110,9 @@ button:hover {
 
 /* When the checkbox is checked, add a blue background */
    .container:hover input:checked ~ .checkmark {
-    background-color: white;
-    color: orange;
+        background-color: darkorange;
+        outline-color: darkorange;
+        border-color: darkorange;
     }
 
   /* Create the checkmark/indicator (hidden when not checked) */
@@ -138,5 +144,7 @@ button:hover {
   .hover {
     cursor: pointer;
   }
+
+
 
 

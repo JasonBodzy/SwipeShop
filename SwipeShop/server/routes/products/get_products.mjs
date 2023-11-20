@@ -74,4 +74,4 @@ const getProduct = async (product) => {
   await browser.close();
 };
 
-getProduct("bottle");
+getProduct("dildo");

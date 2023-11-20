@@ -9,6 +9,7 @@ import Create from "./components/create";
 import CreateAccount from "./components/user/CreateAccount";
 import Login from "./components/user/login";
 import HomePage from "./components/homePage";
+import Categories from "./components/user/Categories";
 
  const App = () => {
  return (
@@ -18,6 +19,7 @@ import HomePage from "./components/homePage";
        <Route exact path="/" element={<CreateAccount />} />
         <Route exact path="/login" element={<Login/>} />
         <Route exact path="/homePage" element={<HomePage/>} />
+        <Route exact path="/categories" element={<Categories/>}></Route>
      </Routes>
    </div>
  );
