@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
 import { useLocalStorage } from "@uidotdev/usehooks";
+import "../../styles/main.css";
+import "../../styles/login.css";
  
 export default function Login() {
  const [form, setForm] = useState({
@@ -65,36 +67,53 @@ export default function Login() {
  // This following section will display the form that takes the input from the user.
  return (
    <div>
-     <h3>Login</h3>
-     <form onSubmit={onSubmit}>
-       <div className="form-group">
-         <label htmlFor="email">Username</label>
-         <input
-           type="text"
-           className="form-control"
-           id="email"
-           value={form.email}
-           onChange={(e) => updateForm({ email: e.target.value })}
-         />
-       </div>
-       <div className="form-group">
-         <label htmlFor="password">Password</label>
-         <input
-           type="password"
-           className="form-control"
-           id="password"
-           value={form.password}
-           onChange={(e) => updateForm({ password: e.target.value })}
-         />
-       </div>
-       <div className="form-group">
-         <input
-           type="submit"
-           value="Login"
-           className="btn btn-primary"
-         />
-       </div>
-     </form>
+      <table>
+        <tbody>
+          <tr>
+            <td className="left-align left-side">
+              <div className="left-side">
+                <h1>Swipe<b>Shop</b></h1>
+                <h1 className="arrow">→</h1>
+              </div>
+            </td>
+            <td className="center-data left-align">
+              <h1>Login</h1>
+              <br className="form-trail"></br>
+              <form onSubmit={onSubmit}>
+                <div className="form-group">
+                  <p htmlFor="email">Username</p>
+                  <input
+                    type="text"
+                    className="form-control form-input"
+                    id="email"
+                    value={form.email}
+                    onChange={(e) => updateForm({ email: e.target.value })}
+                  />
+                </div>
+                <div className="form-group">
+                  <p htmlFor="password">Password</p>
+                  <input
+                    type="password"
+                    className="form-control form-input"
+                    id="password"
+                    value={form.password}
+                    onChange={(e) => updateForm({ password: e.target.value })}
+                  />
+                </div>
+                <br className="form-trail"></br>
+                <div className="form-group">
+                  <input
+                    type="submit"
+                    value="Login"
+                    className="button login-btn"
+                  />
+                </div>
+              </form>
+              <p className="spread">Don't have an account? <b className="hover" onClick={() => navigate("/")}>Create one</b></p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
    </div>
  );
 }

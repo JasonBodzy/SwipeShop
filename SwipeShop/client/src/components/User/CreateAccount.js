@@ -99,7 +99,7 @@ export default function CreateAccount() {
      </form>
 
      <div className="form-group">
-          <label>Already have an account? <b onClick={() => navigate("/login")}>Login</b></label>
+          <label>Already have an account? <b className="hover" onClick={() => navigate("/login")}>Login</b></label>
       </div>
    </div>
  );
